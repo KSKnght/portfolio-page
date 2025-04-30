@@ -25,8 +25,14 @@ export default function Home() {
         }}
       ></div>
 
-      {/* Content Section */}
-      <div className="relative z-10 bg-opacity-80 body p-8 m-auto max-w-3xl mt-80 flex flex-col justify-between h-full">
+      {/* Header */}
+      <div
+        className="fixed top-80 left-0 right-0 z-10 bg-opacity-80 body p-8 m-auto max-w-3xl flex flex-col justify-between"
+        style={{
+          opacity: Math.max(1 - scrollY / 300, 0), // Adjust opacity based on scroll
+          transition: "opacity 0.2s ease-out", // Smooth fade effect
+        }}
+      >
         <div className="flex flex-row">
           <div className="mr-4">
             <Image
@@ -55,7 +61,7 @@ export default function Home() {
       </div>
 
       {/* Additional Content */}
-      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-20 h-400 max-w-6xl m-auto">
+      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-20 h-400 max-w-6xl m-auto top-120">
         <p className="text-center">More content here...</p>
       </div>
 
