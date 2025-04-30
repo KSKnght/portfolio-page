@@ -1,8 +1,11 @@
 @import "tailwindcss";
+/* CSS */
+@import url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: 'Fira Code'; /* Add FiraCode as the default font */
 }
 
 @theme inline {
@@ -14,13 +17,39 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #272e33;
+    --background-rgb: 39, 46, 51;
     --foreground: #ededed;
+    --accent: #a7c080;
   }
 }
 
-body {
+.body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Fira Code', monospace;
+  border: 1px solid var(--accent); /* Inner border */
+  outline: 4px solid var(--background); /* Middle border */
+  box-shadow: 0 0 0 7px var(--accent); /* Outer border */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  padding: 16px; /* Optional: Add padding inside the border */
+}
+
+.body-transparent {
+  background: rgba(var(--background-rgb), 0.9); /* Transparent background using --background */
+  color: var(--foreground); /* Text color */
+  font-family: 'Fira Code', monospace;
+  border: 1px solid var(--accent); /* Inner border */
+  outline: 4px solid rgba(var(--background-rgb), 0.9); /* Semi-transparent middle border */
+  box-shadow: 0 0 0 7px var(--accent); /* Outer border */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  padding: 16px; /* Optional: Add padding inside the border */
+  backdrop-filter: blur(2px); /* Adds a blur effect */
+  -webkit-backdrop-filter: blur(2px); /* For Safari support */
+}
+
+.bg-custom {
+  background-image: url('/bg/bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
