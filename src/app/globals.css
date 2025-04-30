@@ -3,9 +3,34 @@
 @import url('https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-sans: 'Fira Code'; /* Add FiraCode as the default font */
+  --background: #272e33;
+  --background-rgb: 39, 46, 51;
+  --foreground: #ededed;
+  --accent: #a7c080;
+  --font-sans: 'Fira Code', monospace;
+  --font-nerd: 'FiraCodeNerdFont', monospace;
+  --iosevka: 'Iosevka', monospace;
+}
+
+@font-face {
+  font-family: 'FiraCodeNerdFont';
+  src: url('/font/FiraCodeNerdFont-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraCodeNerdFont';
+  src: url('/font/FiraCodeNerdFont-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Iosevka';
+  src: url('/font/Iosevka-Regular.ttc') format('ttc');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @theme inline {
@@ -23,11 +48,22 @@
     --accent: #a7c080;
   }
 }
+.profile-pic {
+  width: 12pc;
+  height: 12pc;
+  margin-right: 1pc;
+  border-radius: 1%;
+  border: 2px solid var(--accent);
+}
+
+.font-iosevka {
+  font-family: var(--iosevka);
+}
 
 .body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-nerd), var(--iosevka);
   border: 1px solid var(--accent); /* Inner border */
   outline: 4px solid var(--background); /* Middle border */
   box-shadow: 0 0 0 7px var(--accent); /* Outer border */
@@ -38,7 +74,7 @@
 .body-transparent {
   background: rgba(var(--background-rgb), 0.9); /* Transparent background using --background */
   color: var(--foreground); /* Text color */
-  font-family: 'Fira Code', monospace;
+  font-family: var(--font-nerd), var(--iosevka);
   border: 1px solid var(--accent); /* Inner border */
   outline: 4px solid rgba(var(--background-rgb), 0.9); /* Semi-transparent middle border */
   box-shadow: 0 0 0 7px var(--accent); /* Outer border */

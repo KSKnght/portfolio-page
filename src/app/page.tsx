@@ -26,14 +26,30 @@ export default function Home() {
       ></div>
 
       {/* Content Section */}
-      <div className="relative z-10 bg-opacity-80 body p-8 m-auto max-w-6xl mt-98 flex flex-col justify-between h-full">
-        <div>
-          <h1 className="text-4xl font-bold text-left mb-1">Welcome to My Portfolio!</h1>
-          <p className="text-xl font-regular">
-            Karl Friedrich E. Foncardaz
-          </p>
+      <div className="relative z-10 bg-opacity-80 body p-8 m-auto max-w-3xl mt-80 flex flex-col justify-between h-full">
+        <div className="flex flex-row">
+          <div className="mr-4">
+            <Image
+              src="/id.png"
+              alt="Portrait of Karl Friedrich E. Foncardaz"
+              width={200}
+              height={200}
+              className="profile-pic"
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <div>
+              hi
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-left mb-1">Welcome to My Portfolio!</h1>
+              <p className="text-xl font-regular font-iosevka">
+                Karl Friedrich E. Foncardaz
+              </p>
+            </div>
+          </div>
         </div>
-        <p className="mt-4 text-left text-sm self-end">
+        <p className="mt-4 text-left text-sm self-center">
           Scroll down to see my portfolio showcase!
         </p>
       </div>
