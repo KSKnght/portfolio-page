@@ -1,9 +1,13 @@
 'use client';
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import WebApp from "./tabs/WebApp";
+import GameDev from "./tabs/GameDev";
+import Arts from "./tabs/Arts";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [activeTab, setActiveTab] = useState("WebApp"); // State to track the active project tab
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,8 +65,81 @@ export default function Home() {
       </div>
 
       {/* Additional Content */}
-      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-20 h-400 max-w-6xl m-auto top-120">
-        <p className="text-center">More content here...</p>
+      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-150 h-400 max-w-6xl m-auto top-120">
+        <div className="flex flex-col justify-center items-center my-8 p-8">
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-lg font-iosevka mb-4">
+            I am a passionate developer with a love for creating beautiful and
+            functional web applications. My journey in tech has been exciting,
+            and I am always eager to learn more.
+          </p>
+          <p className="text-lg mb-4">
+            In my free time, I enjoy exploring new technologies, contributing to
+            open-source projects, and sharing my knowledge with others.
+          </p>
+        </div>
+
+        {/* Projects Section with Tabs */}
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="text-3xl font-bold mb-4">My Projects</h2>
+
+          {/* Tabs Navigation */}
+          <div className="flex justify-center mb-8">
+            <button
+              className={`px-4 py-2 mx-2 ${
+                activeTab === "WebApp" ? "bg-tab" : "bg-tab2"
+              } rounded`}
+              onClick={() => setActiveTab("WebApp")}
+            >
+              <div className="text-4xl mr-3">
+               \udb80\udd69
+              </div>
+               Web and Apps
+            </button>
+            <button
+              className={`px-4 py-2 mx-2 ${
+                activeTab === "GameDev" ? "bg-tab" : "bg-tab2"
+              } rounded`}
+              onClick={() => setActiveTab("GameDev")}
+            >
+              <div className="text-4xl mr-3">
+                \udb80\udeb4   
+              </div>
+              Game Dev
+            </button>
+            <button
+              className={`px-4 py-2 mx-2 ${
+                activeTab === "Arts" ? "bg-tab" : "bg-tab2"
+              } rounded`}
+              onClick={() => setActiveTab("Arts")}
+            > 
+              <div className="text-4xl mr-3">
+                
+              </div>
+              Arts
+            </button>
+          </div>
+
+
+          {/* Tabs Content */}
+          {activeTab === "WebApp" && (
+            <div className="text-lg mb-4 w-full px-12">
+              <WebApp />
+            </div>
+          )}
+          {activeTab === "GameDev" && (
+            <div className="text-lg mb-4 w-full px-12">
+              <GameDev />
+            </div>
+          )}
+          {activeTab === "Arts" && (
+            <div className="text-lg mb-4 w-full px-12">
+              <Arts />
+            </div>
+          )}
+        </div>
+
+
       </div>
 
       {/* Background Music */}
