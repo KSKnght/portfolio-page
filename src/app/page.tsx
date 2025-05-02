@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Additional Content */}
-      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-150 h-400 max-w-6xl m-auto top-120">
+      <div className="relative z-10 bg-opacity-80 body-transparent p-8 mt-128 mb-150 h-auto max-w-6xl m-auto top-120">
         <div className="flex flex-col justify-center items-center my-8 p-8">
           <h2 className="text-3xl font-bold mb-4">About Me</h2>
           <p className="text-lg font-iosevka mb-4">
@@ -138,7 +138,9 @@ export default function Home() {
             </div>
           )}
         </div>
-
+          <div className="flex flex-col justify-center items-center my-8 p-8">
+          <h2 className="text-2xl mb-4">More Projects to come soon!</h2>
+          </div>
 
       </div>
 

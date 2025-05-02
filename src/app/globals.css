@@ -5,7 +5,7 @@
 :root {
   --background: #272e33;
   --background-rgb: 39, 46, 51;
-  --foreground: #ededed;
+  --foreground: #d3c6aa;
   --accent: #a7c080;
   --font-sans: 'Fira Code', monospace;
   --font-nerd: 'FiraCodeNerdFont', monospace;
@@ -13,6 +13,7 @@
   --blue: #7fbbb3;
   --aqua: #83c092;
   --purple: #d699b6;
+  --red: #e67e80;
 }
 
 @font-face {
@@ -75,6 +76,9 @@
 }
 .font-color-accent {
   color: var(--accent);
+}
+.font-color-red {
+  color: var(--red);
 }
 
 .font-FiraCodeNerd {
