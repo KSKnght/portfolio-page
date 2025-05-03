@@ -59,7 +59,7 @@ const Project3 = () => {
         {/* Project Description */}
         <div className="px-10 items-justified">
           <p className="text-lg mb-4 text-justified">
-            This is a project that I helped with the flow and design of the ERP system. And I also helped on the design for thier file generators such as the report pdfs.
+            This is a project that I helped with the flow and interface of the ERP system. Additionally, I also assisted on designing their file generators such as the report pdfs.
           </p>
         </div>
       </div>
