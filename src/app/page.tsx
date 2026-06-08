@@ -96,7 +96,7 @@ export default function Home() {
               </div>
                Web and Apps
             </button>
-            <button
+            {/* <button
               className={`px-4 py-2 mx-2 ${
                 activeTab === "GameDev" ? "bg-tab" : "bg-tab2"
               } rounded`}
@@ -117,7 +117,7 @@ export default function Home() {
                 
               </div>
               Arts
-            </button>
+            </button> */}
           </div>
 
 
