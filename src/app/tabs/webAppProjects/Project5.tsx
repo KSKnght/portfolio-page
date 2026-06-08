@@ -45,7 +45,7 @@ const Project5 = () => {
       </h3>
       {/* Project Date */}
       <div>
-        <p>Dec 2025 - Apr 2026</p>
+        <p>Jun 2025 - Nov 2025</p>
       </div>
       <div className="flex flex-col items-center">
         {/* Slide Preview */}
